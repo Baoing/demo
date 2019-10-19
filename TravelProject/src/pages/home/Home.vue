@@ -48,7 +48,6 @@ export default{
         this.recommends = data.recommendList
         this.weekendList = data.weekendList
       }
-      console.log(res)
     }
   },
   mounted () { // 生命周期钩子函数
