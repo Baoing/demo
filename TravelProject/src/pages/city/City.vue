@@ -2,15 +2,19 @@
   <div>
   <city-header></city-header>
   <city-search :cities = 'cities'></city-search>
-  <city-list
-    :cities = 'cities'
-    :hotCities='hotCities'
-    :letter="letter"
-  ></city-list>
-  <city-alphabet
-    :cities = 'cities'
-    @change="handleLetterChange"
-   ></city-alphabet>
+  <keep-alive>
+    <city-list
+      :cities = 'cities'
+      :hotCities='hotCities'
+      :letter="letter"
+    ></city-list>
+  </keep-alive>
+  <keep-alive>
+    <city-alphabet
+      :cities = 'cities'
+      @change="handleLetterChange"
+     ></city-alphabet>
+   </keep-alive>
   </div>
 </template>
 
